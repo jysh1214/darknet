@@ -4,9 +4,9 @@ SRC=src
 TEST=test
 OBJ=obj
 BIN=bin
-CFLAGS=-Wall -Wno-unused-result -Wno-unknown-pragmas -Wfatal-errors -fPIC
+CFLAGS=-Wall -Wno-unused-result -Wno-unknown-pragmas -Wfatal-errors -fPIC -lstdc++
 CVCONFIG=`pkg-config --libs opencv4` `pkg-config --cflags opencv4` -lstdc++
-GTEST=-lgtest
+GTEST=-lgtest -lgtest_main -pthread
 CLANG=clang++ -Wall
 
 all: dirs Darknet $(BIN)/test
