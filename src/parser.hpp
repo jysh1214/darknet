@@ -25,6 +25,20 @@ static void readData(string filepath, map<string, string>& list)
     vector<string> lines;
     fgetl(file, lines);
 
+    for (string line: lines) {
+        switch (line[0]) {
+            case '\0':
+            case '#':
+            case ';':
+                break;
+            default:
+                if (!readOption(line, list)) {
+                    string error =  "Could not parse: " + line + "\n";
+                    throw error;
+                }
+                break;
+        }
+    }
     file.close();
 }
 

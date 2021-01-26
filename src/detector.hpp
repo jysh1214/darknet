@@ -10,6 +10,7 @@ static void detector(std::string cfgfile, std::string datacfg, std::string weigh
 {
     map<string, string> options;
     readData(datacfg, options);
+    
 }
 
 #endif

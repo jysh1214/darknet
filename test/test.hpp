@@ -25,16 +25,30 @@ TEST(ParserTEST, readInValidDataFile)
     ASSERT_ANY_THROW(readData(path, m));
 }
 
-// TEST(UtilsTEST, FileGetLines)
-// {
-//     string path = "cfg/test.data";
-//     fstream file(path, ios::in);
-//     vector<string> lines;
-//     ASSERT_NO_THROW(fgetl(file, lines));
-//     ASSERT_EQ(lines[0], "classes= 80");
-//     ASSERT_EQ(lines[1], "fuck1");
-//     ASSERT_EQ(lines[2], "fuck2");
-//     ASSERT_EQ(lines[3], "fuckfuck");
-// }
+TEST(UtilsTEST, FileGetLines)
+{
+    string path = "cfg/test.data";
+    fstream file(path, ios::in);
+    vector<string> lines;
+    ASSERT_NO_THROW(fgetl(file, lines));
+}
+
+TEST(SplitTEST, SplitString)
+{
+    string str = "sex = fuck";
+    unique_ptr<string[]> s = split(str, '=');
+    ASSERT_EQ(s[0], "sex ");
+    ASSERT_EQ(s[1], " fuck");
+}
+
+TEST(SplitTEST, RemoveSpace)
+{
+    string str = "sex = fuck";
+    unique_ptr<string[]> s = split(str, '=');
+    removeSpace(s[0]);
+    removeSpace(s[1]);
+    ASSERT_EQ(s[0], "sex");
+    ASSERT_EQ(s[1], "fuck");
+}
 
 #endif
