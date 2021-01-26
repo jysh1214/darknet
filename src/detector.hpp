@@ -16,11 +16,16 @@ static void detector(string cfgfile, string datacfg, string weightfile, string f
     } // 檔案不存在，無法開啟，或是格式不對
     catch (const string error) {
         cout << error;
+        return;
     }
 
-    string trainImages = options["train"];
-    string backupDirectory = options["backup"];
+    vector<string> classes;
+    string namePath = options["names"];
+    getLabels(namePath, classes);
 
+    for (auto l: classes) {
+        cout << l << "\n";
+    }
 }
 
 #endif

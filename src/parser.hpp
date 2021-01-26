@@ -10,15 +10,20 @@
 
 using namespace std;
 
-static void readData(string filepath, map<string, string>& list)
+inline void checkFile(fstream& file, string& filepath)
 {
-    fstream file(filepath.c_str(), ios::in);
     if (!file) {
         throw string("File: " + filepath + " don't exist.\n");
     }
     if (!file.is_open()) {
         throw string("Open " + filepath + " failed.\n");
     }
+}
+
+static void readData(string filepath, map<string, string>& list)
+{
+    fstream file(filepath.c_str(), ios::in);
+    checkFile(file, filepath);
 
     vector<string> lines;
     fgetl(file, lines);
@@ -37,6 +42,14 @@ static void readData(string filepath, map<string, string>& list)
         }
     }
     file.close();
+}
+
+static void getLabels(string namepath, vector<string>& classes)
+{
+    fstream file(namepath.c_str(), ios::in);
+    checkFile(file, namepath);
+    // 一行一個 label
+    fgetl(file, classes);
 }
 
 #endif

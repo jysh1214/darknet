@@ -57,6 +57,21 @@ TEST(OptionTEST, ReadOption)
     map<string, string> m;
     ASSERT_NO_THROW(readData(path, m));
     ASSERT_EQ(m["train"], "/home/pjreddie/data/coco/trainvalno5k.txt");
+    ASSERT_EQ(m["valid"], "coco_testdev");
+    ASSERT_EQ(m["names"], "data/coco.names");
+    ASSERT_EQ(m["backup"], "/home/pjreddie/backup/");
+    ASSERT_EQ(m["eval"], "coco");
+}
+
+TEST(GetLabelsTEST, GetLabels)
+{
+    string path = "data/coco.names";
+    vector<string> labels;
+    ASSERT_NO_THROW(getLabels(path, labels));
+    ASSERT_EQ(labels.size(), 80);
+    ASSERT_EQ(labels[0], "person");
+    ASSERT_EQ(labels[1], "bicycle");
+    ASSERT_EQ(labels[2], "car");
 }
 
 #endif
