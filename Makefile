@@ -29,5 +29,8 @@ doc:
 test:
 	./bin/test
 
+run:
+	./Darknet predict ff
+
 stat:
 	wc src/*

@@ -51,4 +51,12 @@ TEST(SplitTEST, RemoveSpace)
     ASSERT_EQ(s[1], "fuck");
 }
 
+TEST(OptionTEST, ReadOption)
+{
+    string path = "cfg/coco.data";
+    map<string, string> m;
+    ASSERT_NO_THROW(readData(path, m));
+    ASSERT_EQ(m["train"], "/home/pjreddie/data/coco/trainvalno5k.txt");
+}
+
 #endif

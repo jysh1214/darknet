@@ -3,14 +3,24 @@
 
 #include "parser.hpp"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
-static void detector(std::string cfgfile, std::string datacfg, std::string weightfile, std::string filename, float thresh)
+static void detector(string cfgfile, string datacfg, string weightfile, string filename, float thresh)
 {
     map<string, string> options;
-    readData(datacfg, options);
-    
+
+    try {
+        readData(datacfg, options);
+    } // 檔案不存在，無法開啟，或是格式不對
+    catch (const string error) {
+        cout << error;
+    }
+
+    string trainImages = options["train"];
+    string backupDirectory = options["backup"];
+
 }
 
 #endif

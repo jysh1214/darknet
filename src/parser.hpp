@@ -12,14 +12,12 @@ using namespace std;
 
 static void readData(string filepath, map<string, string>& list)
 {
-    fstream file(filepath, ios::in);
+    fstream file(filepath.c_str(), ios::in);
     if (!file) {
-        string error =  "File: " + filepath + " don't exist.\n";
-        throw string(error);
+        throw string("File: " + filepath + " don't exist.\n");
     }
     if (!file.is_open()) {
-        string error =  "Open " + filepath + " failed.\n";
-        throw string(error);
+        throw string("Open " + filepath + " failed.\n");
     }
 
     vector<string> lines;
@@ -33,8 +31,7 @@ static void readData(string filepath, map<string, string>& list)
                 break;
             default:
                 if (!readOption(line, list)) {
-                    string error =  "Could not parse: " + line + "\n";
-                    throw error;
+                    throw string("Could not parse: " + line + "\n");
                 }
                 break;
         }
