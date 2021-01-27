@@ -84,10 +84,141 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a4e9e09ed05e1acf1b1e16169ed58b14c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a> (fstream &amp;file, string &amp;filepath)</td></tr>
+<tr class="separator:a4e9e09ed05e1acf1b1e16169ed58b14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5708bbeb8396d62f4401693005a96d12"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12">readData</a> (string filepath, map&lt; string, string &gt; &amp;list)</td></tr>
 <tr class="separator:a5708bbeb8396d62f4401693005a96d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a80b00e57f1f60c0b99879d51d8edd7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7">getLabels</a> (string namepath, vector&lt; string &gt; &amp;classes)</td></tr>
+<tr class="separator:a1a80b00e57f1f60c0b99879d51d8edd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a4e9e09ed05e1acf1b1e16169ed58b14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e9e09ed05e1acf1b1e16169ed58b14c">&#9670;&nbsp;</a></span>checkFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void checkFile </td>
+          <td>(</td>
+          <td class="paramtype">fstream &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span> (!file) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;File: &quot;</span> + filepath + <span class="stringliteral">&quot; don&#39;t exist.\n&quot;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (!file.is_open()) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Open &quot;</span> + filepath + <span class="stringliteral">&quot; failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7">getLabels()</a>, <a class="el" href="class_network.html#abded646f5e312471bc0e42a9bc6f7fc0">Network::parseNetwork()</a>, and <a class="el" href="parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12">readData()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8hpp_a4e9e09ed05e1acf1b1e16169ed58b14c_icgraph.png" border="0" usemap="#aparser_8hpp_a4e9e09ed05e1acf1b1e16169ed58b14c_icgraph" alt=""/></div>
+<map name="aparser_8hpp_a4e9e09ed05e1acf1b1e16169ed58b14c_icgraph" id="aparser_8hpp_a4e9e09ed05e1acf1b1e16169ed58b14c_icgraph">
+<area shape="rect" title=" " alt="" coords="429,56,508,83"/>
+<area shape="rect" href="parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7" title=" " alt="" coords="262,5,341,32"/>
+<area shape="rect" href="class_network.html#abded646f5e312471bc0e42a9bc6f7fc0" title=" " alt="" coords="221,56,381,83"/>
+<area shape="rect" href="parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="264,107,339,133"/>
+<area shape="rect" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9" title=" " alt="" coords="104,56,173,83"/>
+<area shape="rect" href="darknet_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,56,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1a80b00e57f1f60c0b99879d51d8edd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a80b00e57f1f60c0b99879d51d8edd7">&#9670;&nbsp;</a></span>getLabels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void getLabels </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>namepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>classes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    fstream file(namepath.c_str(), ios::in);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a>(file, namepath);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// 一行一個 label</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a>(file, classes);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="ttc" id="aparser_8hpp_html_a4e9e09ed05e1acf1b1e16169ed58b14c"><div class="ttname"><a href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a></div><div class="ttdeci">static void checkFile(fstream &amp;file, string &amp;filepath)</div><div class="ttdef"><b>Definition:</b> parser.hpp:13</div></div>
+<div class="ttc" id="autils_8hpp_html_adecaa036f10a8452bfae2a0dcd65b05f"><div class="ttname"><a href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a></div><div class="ttdeci">static void fgetl(fstream &amp;file, vector&lt; string &gt; &amp;lines)</div><div class="ttdef"><b>Definition:</b> utils.hpp:14</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile()</a>, and <a class="el" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_cgraph.png" border="0" usemap="#aparser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_cgraph" alt=""/></div>
+<map name="aparser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_cgraph" id="aparser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,84,57"/>
+<area shape="rect" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c" title=" " alt="" coords="132,5,211,32"/>
+<area shape="rect" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="148,56,195,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_icgraph.png" border="0" usemap="#aparser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_icgraph" alt=""/></div>
+<map name="aparser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_icgraph" id="aparser_8hpp_a1a80b00e57f1f60c0b99879d51d8edd7_icgraph">
+<area shape="rect" title=" " alt="" coords="221,5,300,32"/>
+<area shape="rect" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9" title=" " alt="" coords="104,5,173,32"/>
+<area shape="rect" href="darknet_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a5708bbeb8396d62f4401693005a96d12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5708bbeb8396d62f4401693005a96d12">&#9670;&nbsp;</a></span>readData()</h2>
 
@@ -121,37 +252,31 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    fstream file(filepath.c_str(), ios::in);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span> (!file) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;File: &quot;</span> + filepath + <span class="stringliteral">&quot; don&#39;t exist.\n&quot;</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (!file.is_open()) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Open &quot;</span> + filepath + <span class="stringliteral">&quot; failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    vector&lt;string&gt; lines;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a>(file, lines);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">string</span> line: lines) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">switch</span> (line[0]) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;\0&#39;</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption</a>(line, list)) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Could not parse: &quot;</span> + line + <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                }</div>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    fstream file(filepath.c_str(), ios::in);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a>(file, filepath);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    vector&lt;string&gt; lines;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a>(file, lines);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">string</span> line: lines) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">switch</span> (line[0]) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;\0&#39;</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    file.close();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption</a>(line, list)) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Could not parse: &quot;</span> + line + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    file.close();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="ttc" id="autils_8hpp_html_a68fc45bd8483286e0266f0b55bb754fc"><div class="ttname"><a href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption</a></div><div class="ttdeci">static bool readOption(string &amp;str, map&lt; string, string &gt; &amp;list)</div><div class="ttdef"><b>Definition:</b> utils.hpp:48</div></div>
-<div class="ttc" id="autils_8hpp_html_adecaa036f10a8452bfae2a0dcd65b05f"><div class="ttname"><a href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a></div><div class="ttdeci">static void fgetl(fstream &amp;file, vector&lt; string &gt; &amp;lines)</div><div class="ttdef"><b>Definition:</b> utils.hpp:14</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl()</a>, and <a class="el" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption()</a>.</p>
+<p class="reference">References <a class="el" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile()</a>, <a class="el" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl()</a>, and <a class="el" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector()</a>.</p>
 <div class="dynheader">
@@ -159,11 +284,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8hpp_a5708bbeb8396d62f4401693005a96d12_cgraph.png" border="0" usemap="#aparser_8hpp_a5708bbeb8396d62f4401693005a96d12_cgraph" alt=""/></div>
 <map name="aparser_8hpp_a5708bbeb8396d62f4401693005a96d12_cgraph" id="aparser_8hpp_a5708bbeb8396d62f4401693005a96d12_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,80,57"/>
-<area shape="rect" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="147,5,194,32"/>
-<area shape="rect" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="128,56,213,83"/>
-<area shape="rect" href="utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="261,31,364,57"/>
-<area shape="rect" href="utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="289,81,336,108"/>
+<area shape="rect" title=" " alt="" coords="5,56,80,83"/>
+<area shape="rect" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c" title=" " alt="" coords="131,5,210,32"/>
+<area shape="rect" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="147,56,194,83"/>
+<area shape="rect" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="128,107,213,133"/>
+<area shape="rect" href="utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="261,81,364,108"/>
+<area shape="rect" href="utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="289,132,336,159"/>
 </map>
 </div>
 <div class="dynheader">

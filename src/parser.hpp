@@ -2,6 +2,7 @@
 #define PARSER_H
 
 #include "utils.hpp"
+#include "../include/layer_type.hpp"
 
 #include <string>
 #include <map>
@@ -10,7 +11,40 @@
 
 using namespace std;
 
-inline void checkFile(fstream& file, string& filepath)
+static LAYER_TYPE str2LayerType(string type)
+{
+    if (type == "shortcut") return SHORTCUT;
+    if (type == "crop") return CROP;
+    if (type == "cost") return COST;
+    if (type == "detection") return DETECTION;
+    if (type == "region") return REGION;
+    if (type == "yolo") return YOLO;
+    if (type == "iseg") return ISEG;
+    if (type == "local") return LOCAL;
+    if (type == "conv" || type == "convolutional") return CONVOLUTIONAL;
+    if (type == "deconv" || type == "deconvolutional") return DECONVOLUTIONAL;
+    if (type == "activation") return ACTIVE;
+    if (type == "logistic") return LOGXENT;
+    if (type == "l2norm") return L2NORM;
+    if (type == "net" || type == "network") return NETWORK;
+    if (type == "crnn") return CRNN;
+    if (type == "gru") return GRU;
+    if (type == "lstm") return LSTM;
+    if (type == "rnn") return RNN;
+    if (type == "conn" || type == "connected") return CONNECTED;
+    if (type == "max" || type == "maxpool") return MAXPOOL;
+    if (type == "reorg") return REORG;
+    if (type == "avg" || type == "avgpool") return AVGPOOL;
+    if (type == "dropout") return DROPOUT;
+    if (type == "lrn" || type == "normalization") return NORMALIZATION;
+    if (type == "batchnorm") return BATCHNORM;
+    if (type == "soft" || type == "softmax") return SOFTMAX;
+    if (type == "route") return ROUTE;
+    if (type == "upsample") return UPSAMPLE;
+    return BLANK;
+}
+
+static void checkFile(fstream& file, string& filepath)
 {
     if (!file) {
         throw string("File: " + filepath + " don't exist.\n");

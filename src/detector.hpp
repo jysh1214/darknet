@@ -2,6 +2,7 @@
 #define DETECTOR_H
 
 #include "parser.hpp"
+#include "network.hpp"
 #include <string>
 #include <iostream>
 
@@ -23,9 +24,9 @@ static void detector(string cfgfile, string datacfg, string weightfile, string f
     string namePath = options["names"];
     getLabels(namePath, classes);
 
-    for (auto l: classes) {
-        cout << l << "\n";
-    }
+    // image **alphabet = load_alphabet();
+    Network* net = new Network(cfgfile, weightfile);
+    
 }
 
 #endif

@@ -1,8 +1,10 @@
 <map id="detector" name="detector">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,75,57"/>
-<area shape="rect" id="node2" href="$parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="123,31,197,57"/>
-<area shape="rect" id="node3" href="$utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="265,5,311,32"/>
-<area shape="rect" id="node4" href="$utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="245,56,331,83"/>
-<area shape="rect" id="node5" href="$utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="379,31,481,57"/>
-<area shape="rect" id="node6" href="$utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="407,81,453,108"/>
+<area shape="rect" id="node2" href="$parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7" title=" " alt="" coords="123,5,201,32"/>
+<area shape="rect" id="node5" href="$parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="125,56,199,83"/>
+<area shape="rect" id="node3" href="$parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c" title=" " alt="" coords="253,56,331,83"/>
+<area shape="rect" id="node4" href="$utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="269,5,315,32"/>
+<area shape="rect" id="node6" href="$utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="249,107,335,133"/>
+<area shape="rect" id="node7" href="$utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="383,81,485,108"/>
+<area shape="rect" id="node8" href="$utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="411,132,457,159"/>
 </map>

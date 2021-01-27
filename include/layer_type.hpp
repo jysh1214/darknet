@@ -1,0 +1,38 @@
+#ifndef LAYER_TYPE_H
+#define LAYER_TYPE_H
+
+enum LAYER_TYPE
+{
+    CONVOLUTIONAL,
+    DECONVOLUTIONAL,
+    CONNECTED,
+    MAXPOOL,
+    SOFTMAX,
+    DETECTION,
+    DROPOUT,
+    CROP,
+    ROUTE,
+    COST,
+    NORMALIZATION,
+    AVGPOOL,
+    LOCAL,
+    SHORTCUT,
+    ACTIVE,
+    RNN,
+    GRU,
+    LSTM,
+    CRNN,
+    BATCHNORM,
+    NETWORK,
+    XNOR,
+    REGION,
+    YOLO,
+    ISEG,
+    REORG,
+    UPSAMPLE,
+    LOGXENT,
+    L2NORM,
+    BLANK
+};
+
+#endif

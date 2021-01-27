@@ -1,8 +1,12 @@
 #ifndef TEST_H
 #define TEST_H
 
+#include "../include/layer_type.hpp"
+
 #include "../src/darknet.hpp"
 #include "../src/detector.hpp"
+#include "../src/network.hpp"
+#include "../src/node.hpp"
 #include "../src/parser.hpp"
 #include "../src/utils.hpp"
 
@@ -72,6 +76,18 @@ TEST(GetLabelsTEST, GetLabels)
     ASSERT_EQ(labels[0], "person");
     ASSERT_EQ(labels[1], "bicycle");
     ASSERT_EQ(labels[2], "car");
+}
+
+TEST(PaerserNetworkTEST, GetLayerType)
+{
+    string cfgfile = "cfg/yolov3-tiny.cfg";
+    string weightfile = "";
+    Network* net = new Network(cfgfile, weightfile);
+
+    ASSERT_EQ(net->nodeList[0]->type, NETWORK);
+    ASSERT_EQ(net->nodeList[1]->type, CONVOLUTIONAL);
+
+    delete net;
 }
 
 #endif
