@@ -13,14 +13,14 @@ all: dirs Darknet $(BIN)/test
 
 Darknet: $(SRC)/darknet.cpp \
 	$(OBJ)/network.o
-	$(CLANG) $^ -o $@ $(CFLAGS)
+	$(CLANG) $^ -o $@ $(CFLAGS) $(CVCONFIG)
 
 $(BIN)/test: $(TEST)/test.cpp \
 	$(OBJ)/network.o
-	$(CLANG) $^ -o $@ $(CFLAGS) $(GTEST)
+	$(CLANG) $^ -o $@ $(CFLAGS) $(CVCONFIG) $(GTEST)
 
 $(OBJ)/network.o: $(SRC)/network.cpp
-	$(CLANG) -c $< -o $@ $(CFLAGS)
+	$(CLANG) -c $< -o $@ $(CFLAGS) $(CVCONFIG)
 
 dirs:
 	mkdir -p $(SRC) $(OBJ) $(TEST) $(BIN)

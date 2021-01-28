@@ -6,7 +6,7 @@
 #include "../src/darknet.hpp"
 #include "../src/detector.hpp"
 #include "../src/network.hpp"
-#include "../src/node.hpp"
+#include "../src/section.hpp"
 #include "../src/parser.hpp"
 #include "../src/utils.hpp"
 
@@ -84,8 +84,8 @@ TEST(PaerserNetworkTEST, GetLayerType)
     string weightfile = "";
     Network* net = new Network(cfgfile, weightfile);
 
-    ASSERT_EQ(net->nodeList[0]->type, NETWORK);
-    ASSERT_EQ(net->nodeList[1]->type, CONVOLUTIONAL);
+    ASSERT_EQ(net->sectionList[0]->type, NETWORK);
+    ASSERT_EQ(net->sectionList[1]->type, CONVOLUTIONAL);
 
     delete net;
 }
@@ -96,17 +96,38 @@ TEST(PaerserNetworkTEST, GetLayerParams)
     string weightfile = "";
     Network* net = new Network(cfgfile, weightfile);
 
-    Node* net_section = net->nodeList[0];
+    Section* net_section = net->sectionList[0];
     ASSERT_EQ(net_section->type, NETWORK);
     ASSERT_EQ(net_section->params["batch"], "1");
     ASSERT_EQ(net_section->params["decay"], "0.0005");
 
-    Node* conv_section = net->nodeList[1];
+    Section* conv_section = net->sectionList[1];
     ASSERT_EQ(conv_section->type, CONVOLUTIONAL);
     ASSERT_EQ(conv_section->params["filters"], "16");
     ASSERT_EQ(conv_section->params["activation"], "leaky");
 
     delete net;
+}
+
+TEST(SetBatchTEST, CheckBatch)
+{
+    string cfgfile = "cfg/yolov3-tiny.cfg";
+    string weightfile = "";
+    Network* net = new Network(cfgfile, weightfile);
+    net->setBatch(1);
+
+    for (auto section: net->sectionList) {
+        ASSERT_EQ(section->params["batch"], "1");
+    }
+
+    delete net;
+}
+
+TEST(CheckFileTEST, CheckFile)
+{
+    string filename = "data/dog.jpg";
+    fstream file(filename.c_str(), ios::in);
+    ASSERT_NO_THROW(checkFile(file, filename));
 }
 
 #endif

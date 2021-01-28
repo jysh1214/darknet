@@ -1,5 +1,5 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef SECTION_H
+#define SECTION_H
 
 #include "../include/layer_type.hpp"
 #include <map>
@@ -7,9 +7,10 @@
 
 using namespace std;
 
-struct Node
+// OpenCV 已經有 Node, 所以用 Section 命名
+struct Section
 {
-    Node(const LAYER_TYPE _type): type(_type){}
+    Section(const LAYER_TYPE _type): type(_type){}
     const LAYER_TYPE type;
     map<string, string> params;
 };

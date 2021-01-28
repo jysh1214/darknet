@@ -13,12 +13,12 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    string cfgfile = "cfg/yolov3-tiny.cfg";  
+    string cfgfile = "cfg/yolov3-tiny.cfg";
     string datafile = "cfg/coco.data";
     string weightsfile = "";
 
     if (std::string(argv[1]) == "predict") {
-        detector(cfgfile, datafile, weightsfile, "fuck", 0.5);
+        detector(cfgfile, datafile, weightsfile, "data/dog.jpg", 0.5);
     }
 
     return 0;

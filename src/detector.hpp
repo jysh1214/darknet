@@ -1,6 +1,7 @@
 #ifndef DETECTOR_H
 #define DETECTOR_H
 
+#include "imgproc.hpp"
 #include "parser.hpp"
 #include "network.hpp"
 #include <string>
@@ -26,7 +27,14 @@ static void detector(string cfgfile, string datacfg, string weightfile, string f
 
     // image **alphabet = load_alphabet();
     Network* net = new Network(cfgfile, weightfile);
-    
+    net->setBatch(1);
+    float nms=.45;
+
+    fstream file(filename.c_str(), ios::in);
+    checkFile(file, filename);
+    Image image = readImage(filename);
+
+    net->predict();
 }
 
 #endif

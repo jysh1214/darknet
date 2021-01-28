@@ -2,6 +2,7 @@
 #include "parser.hpp"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -17,9 +18,23 @@ Network::Network(string cfgfile, string weightfile)
 
 Network::~Network()
 {
-    for (auto node: nodeList) {
-        if (node) delete node;
+    for (auto section: sectionList) {
+        if (section) delete section;
     }
+}
+
+void Network::setBatch(size_t i)
+{
+    for (auto section: sectionList) {
+        stringstream temp;
+        temp << i;
+        section->params["batch"] = temp.str();
+    }
+}
+
+void Network::predict()
+{
+
 }
 
 void Network::parseNetwork(string cfgfile)
@@ -36,16 +51,16 @@ void Network::parseNetwork(string cfgfile)
                 int p = 1;
                 while (line[p] != ']') ++p;
                 LAYER_TYPE type = str2LayerType(line.substr(1, p-1));
-                Node* node = new Node(type);
-                nodeList.push_back(node);
+                Section* section = new Section(type);
+                sectionList.push_back(section);
             }
             case '\0':
             case '#':
             case ';':
                 break;
             default:
-                // 選永遠最後一個 node
-                if (!readOption(line, (*(nodeList.end()-1))->params)) {
+                // 永遠選最後一個 node
+                if (!readOption(line, (*(sectionList.end()-1))->params)) {
                     throw string("Could not parse: " + line + "\n");
                 }
                 break;
