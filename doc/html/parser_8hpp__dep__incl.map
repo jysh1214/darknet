@@ -1,6 +1,10 @@
 <map id="src/parser.hpp" name="src/parser.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="80,5,184,32"/>
-<area shape="rect" id="node2" href="$detector_8hpp.html" title=" " alt="" coords="5,80,120,107"/>
-<area shape="rect" id="node4" href="$network_8cpp.html" title=" " alt="" coords="144,80,259,107"/>
-<area shape="rect" id="node3" href="$darknet_8cpp.html" title=" " alt="" coords="7,155,119,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="127,5,231,32"/>
+<area shape="rect" id="node2" href="$conv__layer_8hpp.html" title=" " alt="" coords="63,80,194,107"/>
+<area shape="rect" id="node4" href="$section_8hpp.html" title=" " alt="" coords="176,155,286,181"/>
+<area shape="rect" id="node6" href="$detector_8hpp.html" title=" " alt="" coords="27,304,142,331"/>
+<area shape="rect" id="node8" href="$network_8cpp.html" title=" " alt="" coords="219,304,334,331"/>
+<area shape="rect" id="node3" href="$conv__layer_8cpp.html" title=" " alt="" coords="20,155,151,181"/>
+<area shape="rect" id="node5" href="$network_8hpp.html" title=" " alt="" coords="172,229,287,256"/>
+<area shape="rect" id="node7" href="$darknet_8cpp.html" title=" " alt="" coords="28,379,140,405"/>
 </map>

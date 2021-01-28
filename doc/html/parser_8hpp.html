@@ -48,8 +48,10 @@ $(function() {
 <div class="title">parser.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;../include/activation.hpp&quot;</code><br />
 <code>#include &quot;../include/layer_type.hpp&quot;</code><br />
+<code>#include &quot;../include/size_params.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
@@ -59,16 +61,18 @@ Include dependency graph for parser.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8hpp__incl.png" border="0" usemap="#asrc_2parser_8hpp" alt=""/></div>
 <map name="asrc_2parser_8hpp" id="asrc_2parser_8hpp">
-<area shape="rect" title=" " alt="" coords="279,5,383,32"/>
-<area shape="rect" href="utils_8hpp.html" title=" " alt="" coords="260,80,331,107"/>
-<area shape="rect" title=" " alt="" coords="5,155,60,181"/>
-<area shape="rect" title=" " alt="" coords="85,155,151,181"/>
-<area shape="rect" title=" " alt="" coords="450,155,522,181"/>
-<area shape="rect" title=" " alt="" coords="547,155,593,181"/>
-<area shape="rect" title=" " alt="" coords="457,80,621,107"/>
-<area shape="rect" title=" " alt="" coords="175,155,234,181"/>
-<area shape="rect" title=" " alt="" coords="258,155,333,181"/>
-<area shape="rect" title=" " alt="" coords="357,155,426,181"/>
+<area shape="rect" title=" " alt="" coords="568,5,672,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,165,107"/>
+<area shape="rect" title=" " alt="" coords="190,80,354,107"/>
+<area shape="rect" title=" " alt="" coords="379,80,557,107"/>
+<area shape="rect" href="utils_8hpp.html" title=" " alt="" coords="683,80,754,107"/>
+<area shape="rect" title=" " alt="" coords="429,155,483,181"/>
+<area shape="rect" title=" " alt="" coords="508,155,575,181"/>
+<area shape="rect" title=" " alt="" coords="873,155,945,181"/>
+<area shape="rect" title=" " alt="" coords="970,155,1017,181"/>
+<area shape="rect" title=" " alt="" coords="599,155,657,181"/>
+<area shape="rect" title=" " alt="" coords="681,155,756,181"/>
+<area shape="rect" title=" " alt="" coords="780,155,849,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -76,10 +80,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="parser_8hpp__dep__incl.png" border="0" usemap="#asrc_2parser_8hppdep" alt=""/></div>
 <map name="asrc_2parser_8hppdep" id="asrc_2parser_8hppdep">
-<area shape="rect" title=" " alt="" coords="80,5,184,32"/>
-<area shape="rect" href="detector_8hpp.html" title=" " alt="" coords="5,80,120,107"/>
-<area shape="rect" href="network_8cpp.html" title=" " alt="" coords="144,80,259,107"/>
-<area shape="rect" href="darknet_8cpp.html" title=" " alt="" coords="7,155,119,181"/>
+<area shape="rect" title=" " alt="" coords="127,5,231,32"/>
+<area shape="rect" href="conv__layer_8hpp.html" title=" " alt="" coords="63,80,194,107"/>
+<area shape="rect" href="section_8hpp.html" title=" " alt="" coords="176,155,286,181"/>
+<area shape="rect" href="detector_8hpp.html" title=" " alt="" coords="27,304,142,331"/>
+<area shape="rect" href="network_8cpp.html" title=" " alt="" coords="219,304,334,331"/>
+<area shape="rect" href="conv__layer_8cpp.html" title=" " alt="" coords="20,155,151,181"/>
+<area shape="rect" href="network_8hpp.html" title=" " alt="" coords="172,229,287,256"/>
+<area shape="rect" href="darknet_8cpp.html" title=" " alt="" coords="28,379,140,405"/>
 </map>
 </div>
 </div>
@@ -87,6 +95,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a624b7621e0669470b38ed681fa27fd91"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#a624b7621e0669470b38ed681fa27fd91">geti</a> (string s, int i)</td></tr>
+<tr class="separator:a624b7621e0669470b38ed681fa27fd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a438a0bde69671fca359babe2cd67d"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#a80a438a0bde69671fca359babe2cd67d">getf</a> (string s, float f)</td></tr>
+<tr class="separator:a80a438a0bde69671fca359babe2cd67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2bcc27a10e6cb534b70f7428964ebe"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#a4c2bcc27a10e6cb534b70f7428964ebe">gets</a> (string s, string v)</td></tr>
+<tr class="separator:a4c2bcc27a10e6cb534b70f7428964ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa7e9df395c5ab9c9ae520a2b0d581f"><td class="memItemLeft" align="right" valign="top">static ACTIVATION&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#aefa7e9df395c5ab9c9ae520a2b0d581f">getActivation</a> (string a)</td></tr>
+<tr class="separator:aefa7e9df395c5ab9c9ae520a2b0d581f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab04784ade4cb6d4321ceca8313a7143d"><td class="memItemLeft" align="right" valign="top">static LAYER_TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#ab04784ade4cb6d4321ceca8313a7143d">str2LayerType</a> (string type)</td></tr>
 <tr class="separator:ab04784ade4cb6d4321ceca8313a7143d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e9e09ed05e1acf1b1e16169ed58b14c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a> (fstream &amp;file, string &amp;filepath)</td></tr>
@@ -130,14 +146,14 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (!file) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;File: &quot;</span> + filepath + <span class="stringliteral">&quot; don&#39;t exist.\n&quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (!file.is_open()) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Open &quot;</span> + filepath + <span class="stringliteral">&quot; failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (!file) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;File: &quot;</span> + filepath + <span class="stringliteral">&quot; don&#39;t exist.\n&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> (!file.is_open()) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Open &quot;</span> + filepath + <span class="stringliteral">&quot; failed.\n&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector()</a>, <a class="el" href="parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7">getLabels()</a>, <a class="el" href="struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0">Network::parseNetwork()</a>, and <a class="el" href="parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12">readData()</a>.</p>
 <div class="dynheader">
@@ -151,6 +167,163 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0" title=" " alt="" coords="221,80,381,106"/>
 <area shape="rect" href="parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="264,130,339,157"/>
 <area shape="rect" href="darknet_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,29,56,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aefa7e9df395c5ab9c9ae520a2b0d581f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa7e9df395c5ab9c9ae520a2b0d581f">&#9670;&nbsp;</a></span>getActivation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ACTIVATION getActivation </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;logistic&quot;</span>) <span class="keywordflow">return</span> LOGISTIC;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;loggy&quot;</span>) <span class="keywordflow">return</span> LOGGY;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;relu&quot;</span>) <span class="keywordflow">return</span> RELU;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;elu&quot;</span>) <span class="keywordflow">return</span> ELU;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;selu&quot;</span>) <span class="keywordflow">return</span> SELU;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;relie&quot;</span>) <span class="keywordflow">return</span> RELIE;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;plse&quot;</span>) <span class="keywordflow">return</span> PLSE;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;hardtan&quot;</span>) <span class="keywordflow">return</span> HARDTAN;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;lhtan&quot;</span>) <span class="keywordflow">return</span> LHTAN;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;linear&quot;</span>) <span class="keywordflow">return</span> LINEAR;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;ramp&quot;</span>) <span class="keywordflow">return</span> RAMP;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;leaky&quot;</span>) <span class="keywordflow">return</span> LEAKY;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;tanh&quot;</span>) <span class="keywordflow">return</span> TANH;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (a == <span class="stringliteral">&quot;stair&quot;</span>) <span class="keywordflow">return</span> STAIR;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> RELU;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="struct_conv_layer.html#ac7fbfc203164951a1d5624dfd3f58dc1">ConvLayer::ConvLayer()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8hpp_aefa7e9df395c5ab9c9ae520a2b0d581f_icgraph.png" border="0" usemap="#aparser_8hpp_aefa7e9df395c5ab9c9ae520a2b0d581f_icgraph" alt=""/></div>
+<map name="aparser_8hpp_aefa7e9df395c5ab9c9ae520a2b0d581f_icgraph" id="aparser_8hpp_aefa7e9df395c5ab9c9ae520a2b0d581f_icgraph">
+<area shape="rect" title=" " alt="" coords="209,5,308,32"/>
+<area shape="rect" href="struct_conv_layer.html#ac7fbfc203164951a1d5624dfd3f58dc1" title=" " alt="" coords="5,5,161,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a80a438a0bde69671fca359babe2cd67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a438a0bde69671fca359babe2cd67d">&#9670;&nbsp;</a></span>getf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float getf </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;&quot;</span>) <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> stof(s);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0">Network::parseNetwork()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8hpp_a80a438a0bde69671fca359babe2cd67d_icgraph.png" border="0" usemap="#aparser_8hpp_a80a438a0bde69671fca359babe2cd67d_icgraph" alt=""/></div>
+<map name="aparser_8hpp_a80a438a0bde69671fca359babe2cd67d_icgraph" id="aparser_8hpp_a80a438a0bde69671fca359babe2cd67d_icgraph">
+<area shape="rect" title=" " alt="" coords="213,5,257,32"/>
+<area shape="rect" href="struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0" title=" " alt="" coords="5,5,165,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a624b7621e0669470b38ed681fa27fd91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624b7621e0669470b38ed681fa27fd91">&#9670;&nbsp;</a></span>geti()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int geti </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (s == <span class="stringliteral">&quot;&quot;</span>) <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> stoi(s);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="struct_conv_layer.html#ac7fbfc203164951a1d5624dfd3f58dc1">ConvLayer::ConvLayer()</a>, and <a class="el" href="struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0">Network::parseNetwork()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8hpp_a624b7621e0669470b38ed681fa27fd91_icgraph.png" border="0" usemap="#aparser_8hpp_a624b7621e0669470b38ed681fa27fd91_icgraph" alt=""/></div>
+<map name="aparser_8hpp_a624b7621e0669470b38ed681fa27fd91_icgraph" id="aparser_8hpp_a624b7621e0669470b38ed681fa27fd91_icgraph">
+<area shape="rect" title=" " alt="" coords="213,31,256,57"/>
+<area shape="rect" href="struct_conv_layer.html#ac7fbfc203164951a1d5624dfd3f58dc1" title=" " alt="" coords="7,5,163,32"/>
+<area shape="rect" href="struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0" title=" " alt="" coords="5,56,165,83"/>
 </map>
 </div>
 
@@ -189,13 +362,13 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    fstream file(namepath.c_str(), ios::in);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a>(file, namepath);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// 一行一個 label</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a>(file, classes);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
-<div class="ttc" id="aparser_8hpp_html_a4e9e09ed05e1acf1b1e16169ed58b14c"><div class="ttname"><a href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a></div><div class="ttdeci">static void checkFile(fstream &amp;file, string &amp;filepath)</div><div class="ttdef"><b>Definition:</b> parser.hpp:47</div></div>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    fstream file(namepath.c_str(), ios::in);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a>(file, namepath);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// 一行一個 label</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a>(file, classes);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="ttc" id="aparser_8hpp_html_a4e9e09ed05e1acf1b1e16169ed58b14c"><div class="ttname"><a href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a></div><div class="ttdeci">static void checkFile(fstream &amp;file, string &amp;filepath)</div><div class="ttdef"><b>Definition:</b> parser.hpp:85</div></div>
 <div class="ttc" id="autils_8hpp_html_adecaa036f10a8452bfae2a0dcd65b05f"><div class="ttname"><a href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a></div><div class="ttdeci">static void fgetl(fstream &amp;file, vector&lt; string &gt; &amp;lines)</div><div class="ttdef"><b>Definition:</b> utils.hpp:14</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile()</a>, and <a class="el" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl()</a>.</p>
@@ -219,6 +392,56 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="221,5,300,32"/>
 <area shape="rect" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9" title=" " alt="" coords="104,5,173,32"/>
 <area shape="rect" href="darknet_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c2bcc27a10e6cb534b70f7428964ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2bcc27a10e6cb534b70f7428964ebe">&#9670;&nbsp;</a></span>gets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string gets </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> (s == <span class="stringliteral">&quot;&quot;</span>)? v: s;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="struct_conv_layer.html#ac7fbfc203164951a1d5624dfd3f58dc1">ConvLayer::ConvLayer()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parser_8hpp_a4c2bcc27a10e6cb534b70f7428964ebe_icgraph.png" border="0" usemap="#aparser_8hpp_a4c2bcc27a10e6cb534b70f7428964ebe_icgraph" alt=""/></div>
+<map name="aparser_8hpp_a4c2bcc27a10e6cb534b70f7428964ebe_icgraph" id="aparser_8hpp_a4c2bcc27a10e6cb534b70f7428964ebe_icgraph">
+<area shape="rect" title=" " alt="" coords="209,5,256,32"/>
+<area shape="rect" href="struct_conv_layer.html#ac7fbfc203164951a1d5624dfd3f58dc1" title=" " alt="" coords="5,5,161,32"/>
 </map>
 </div>
 
@@ -257,28 +480,28 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    fstream file(filepath.c_str(), ios::in);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a>(file, filepath);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    vector&lt;string&gt; lines;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a>(file, lines);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">string</span> line: lines) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">switch</span> (line[0]) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;\0&#39;</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption</a>(line, list)) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Could not parse: &quot;</span> + line + <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    file.close();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    fstream file(filepath.c_str(), ios::in);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile</a>(file, filepath);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    vector&lt;string&gt; lines;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl</a>(file, lines);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">string</span> line: lines) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">switch</span> (line[0]) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;\0&#39;</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption</a>(line, list)) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    <span class="keywordflow">throw</span> string(<span class="stringliteral">&quot;Could not parse: &quot;</span> + line + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    file.close();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="ttc" id="autils_8hpp_html_a68fc45bd8483286e0266f0b55bb754fc"><div class="ttname"><a href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption</a></div><div class="ttdeci">static bool readOption(string &amp;str, map&lt; string, string &gt; &amp;list)</div><div class="ttdef"><b>Definition:</b> utils.hpp:48</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c">checkFile()</a>, <a class="el" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f">fgetl()</a>, and <a class="el" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc">readOption()</a>.</p>
@@ -333,37 +556,37 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;shortcut&quot;</span>) <span class="keywordflow">return</span> SHORTCUT;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;crop&quot;</span>) <span class="keywordflow">return</span> CROP;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;cost&quot;</span>) <span class="keywordflow">return</span> COST;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;detection&quot;</span>) <span class="keywordflow">return</span> DETECTION;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;region&quot;</span>) <span class="keywordflow">return</span> REGION;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;yolo&quot;</span>) <span class="keywordflow">return</span> YOLO;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;iseg&quot;</span>) <span class="keywordflow">return</span> ISEG;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;local&quot;</span>) <span class="keywordflow">return</span> LOCAL;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;conv&quot;</span> || type == <span class="stringliteral">&quot;convolutional&quot;</span>) <span class="keywordflow">return</span> CONVOLUTIONAL;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;deconv&quot;</span> || type == <span class="stringliteral">&quot;deconvolutional&quot;</span>) <span class="keywordflow">return</span> DECONVOLUTIONAL;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;activation&quot;</span>) <span class="keywordflow">return</span> ACTIVE;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;logistic&quot;</span>) <span class="keywordflow">return</span> LOGXENT;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;l2norm&quot;</span>) <span class="keywordflow">return</span> L2NORM;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;net&quot;</span> || type == <span class="stringliteral">&quot;network&quot;</span>) <span class="keywordflow">return</span> NETWORK;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;crnn&quot;</span>) <span class="keywordflow">return</span> CRNN;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;gru&quot;</span>) <span class="keywordflow">return</span> GRU;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;lstm&quot;</span>) <span class="keywordflow">return</span> LSTM;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;rnn&quot;</span>) <span class="keywordflow">return</span> RNN;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;conn&quot;</span> || type == <span class="stringliteral">&quot;connected&quot;</span>) <span class="keywordflow">return</span> CONNECTED;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;max&quot;</span> || type == <span class="stringliteral">&quot;maxpool&quot;</span>) <span class="keywordflow">return</span> MAXPOOL;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;reorg&quot;</span>) <span class="keywordflow">return</span> REORG;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;avg&quot;</span> || type == <span class="stringliteral">&quot;avgpool&quot;</span>) <span class="keywordflow">return</span> AVGPOOL;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;dropout&quot;</span>) <span class="keywordflow">return</span> DROPOUT;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;lrn&quot;</span> || type == <span class="stringliteral">&quot;normalization&quot;</span>) <span class="keywordflow">return</span> NORMALIZATION;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;batchnorm&quot;</span>) <span class="keywordflow">return</span> BATCHNORM;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;soft&quot;</span> || type == <span class="stringliteral">&quot;softmax&quot;</span>) <span class="keywordflow">return</span> SOFTMAX;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;route&quot;</span>) <span class="keywordflow">return</span> ROUTE;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;upsample&quot;</span>) <span class="keywordflow">return</span> UPSAMPLE;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> BLANK;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;shortcut&quot;</span>) <span class="keywordflow">return</span> SHORTCUT;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;crop&quot;</span>) <span class="keywordflow">return</span> CROP;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;cost&quot;</span>) <span class="keywordflow">return</span> COST;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;detection&quot;</span>) <span class="keywordflow">return</span> DETECTION;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;region&quot;</span>) <span class="keywordflow">return</span> REGION;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;yolo&quot;</span>) <span class="keywordflow">return</span> YOLO;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;iseg&quot;</span>) <span class="keywordflow">return</span> ISEG;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;local&quot;</span>) <span class="keywordflow">return</span> LOCAL;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;conv&quot;</span> || type == <span class="stringliteral">&quot;convolutional&quot;</span>) <span class="keywordflow">return</span> CONVOLUTIONAL;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;deconv&quot;</span> || type == <span class="stringliteral">&quot;deconvolutional&quot;</span>) <span class="keywordflow">return</span> DECONVOLUTIONAL;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;activation&quot;</span>) <span class="keywordflow">return</span> ACTIVE;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;logistic&quot;</span>) <span class="keywordflow">return</span> LOGXENT;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;l2norm&quot;</span>) <span class="keywordflow">return</span> L2NORM;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;net&quot;</span> || type == <span class="stringliteral">&quot;network&quot;</span>) <span class="keywordflow">return</span> NETWORK;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;crnn&quot;</span>) <span class="keywordflow">return</span> CRNN;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;gru&quot;</span>) <span class="keywordflow">return</span> GRU;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;lstm&quot;</span>) <span class="keywordflow">return</span> LSTM;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;rnn&quot;</span>) <span class="keywordflow">return</span> RNN;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;conn&quot;</span> || type == <span class="stringliteral">&quot;connected&quot;</span>) <span class="keywordflow">return</span> CONNECTED;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;max&quot;</span> || type == <span class="stringliteral">&quot;maxpool&quot;</span>) <span class="keywordflow">return</span> MAXPOOL;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;reorg&quot;</span>) <span class="keywordflow">return</span> REORG;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;avg&quot;</span> || type == <span class="stringliteral">&quot;avgpool&quot;</span>) <span class="keywordflow">return</span> AVGPOOL;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;dropout&quot;</span>) <span class="keywordflow">return</span> DROPOUT;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;lrn&quot;</span> || type == <span class="stringliteral">&quot;normalization&quot;</span>) <span class="keywordflow">return</span> NORMALIZATION;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;batchnorm&quot;</span>) <span class="keywordflow">return</span> BATCHNORM;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;soft&quot;</span> || type == <span class="stringliteral">&quot;softmax&quot;</span>) <span class="keywordflow">return</span> SOFTMAX;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;route&quot;</span>) <span class="keywordflow">return</span> ROUTE;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;upsample&quot;</span>) <span class="keywordflow">return</span> UPSAMPLE;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> BLANK;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0">Network::parseNetwork()</a>.</p>
 <div class="dynheader">

@@ -1,4 +1,10 @@
 <map id="src/layer.hpp" name="src/layer.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="15,5,111,32"/>
-<area shape="rect" id="node2" href="$network_8cpp.html" title=" " alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="215,5,311,32"/>
+<area shape="rect" id="node2" href="$conv__layer_8hpp.html" title=" " alt="" coords="147,80,277,107"/>
+<area shape="rect" id="node8" href="$network_8cpp.html" title=" " alt="" coords="257,304,372,331"/>
+<area shape="rect" id="node3" href="$conv__layer_8cpp.html" title=" " alt="" coords="5,155,136,181"/>
+<area shape="rect" id="node4" href="$section_8hpp.html" title=" " alt="" coords="161,155,271,181"/>
+<area shape="rect" id="node5" href="$network_8hpp.html" title=" " alt="" coords="159,229,273,256"/>
+<area shape="rect" id="node6" href="$detector_8hpp.html" title=" " alt="" coords="119,304,233,331"/>
+<area shape="rect" id="node7" href="$darknet_8cpp.html" title=" " alt="" coords="120,379,232,405"/>
 </map>

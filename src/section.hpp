@@ -2,9 +2,11 @@
 #define SECTION_H
 
 #include "../include/layer_type.hpp"
+#include "../include/size_params.hpp"
+#include "conv_layer.hpp"
 #include "parser.hpp"
-#include "layer.hpp"
 #include <map>
+#include <string>
 #include <iostream>
 
 using namespace std;
@@ -20,13 +22,18 @@ struct Section
     Layer layer;
     map<string, string> params;
 
-    void assignValue()
+    void assignValue(sizeParams size_params)
     {
         switch (type) {
             case NETWORK:
                 break;
             case CONVOLUTIONAL:
-                layer = parseConvolutional(params);
+                try {
+                    layer = ConvLayer(params, size_params);
+                }
+                catch (const string error) {
+                    cout << error;
+                }
                 break;
             case YOLO:
                 // layer = parseYOLO(params);

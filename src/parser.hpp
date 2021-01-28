@@ -1,8 +1,10 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-#include "utils.hpp"
+#include "../include/activation.hpp"
 #include "../include/layer_type.hpp"
+#include "../include/size_params.hpp"
+#include "utils.hpp"
 
 #include <string>
 #include <map>
@@ -23,9 +25,28 @@ static float getf(string s, float f)
     else return stof(s);
 }
 
-Layer parseConvolutional(map<string, string>& params)
+static string gets(string s, string v)
 {
+    return (s == "")? v: s;
+}
 
+static ACTIVATION getActivation(string a)
+{
+    if (a == "logistic") return LOGISTIC;
+    if (a == "loggy") return LOGGY;
+    if (a == "relu") return RELU;
+    if (a == "elu") return ELU;
+    if (a == "selu") return SELU;
+    if (a == "relie") return RELIE;
+    if (a == "plse") return PLSE;
+    if (a == "hardtan") return HARDTAN;
+    if (a == "lhtan") return LHTAN;
+    if (a == "linear") return LINEAR;
+    if (a == "ramp") return RAMP;
+    if (a == "leaky") return LEAKY;
+    if (a == "tanh") return TANH;
+    if (a == "stair") return STAIR;
+    return RELU;
 }
 
 static LAYER_TYPE str2LayerType(string type)

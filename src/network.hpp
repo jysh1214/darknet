@@ -18,7 +18,6 @@ struct Network
     // Node 包含 layer type 和其參數
     vector<Section*> sectionList;
 
-
     int n;
     int batch;
     // 看到的圖片數量
@@ -77,18 +76,6 @@ struct Network
 private:
     void parseNetwork(string cfgfile);
     void loadWeights(string weightfile);
-};
-
-struct size_params
-{
-    int batch;
-    int inputs;
-    int h;
-    int w;
-    int c;
-    int index;
-    int time_steps;
-    Network* net;
 };
 
 #endif

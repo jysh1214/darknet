@@ -12,14 +12,19 @@ CLANG=clang++ -Wall -std=c++11
 all: dirs Darknet $(BIN)/test
 
 Darknet: $(SRC)/darknet.cpp \
-	$(OBJ)/network.o
+	$(OBJ)/network.o \
+	$(OBJ)/conv_layer.o
 	$(CLANG) $^ -o $@ $(CFLAGS) $(CVCONFIG)
 
 $(BIN)/test: $(TEST)/test.cpp \
-	$(OBJ)/network.o
+	$(OBJ)/network.o \
+	$(OBJ)/conv_layer.o
 	$(CLANG) $^ -o $@ $(CFLAGS) $(CVCONFIG) $(GTEST)
 
 $(OBJ)/network.o: $(SRC)/network.cpp
+	$(CLANG) -c $< -o $@ $(CFLAGS) $(CVCONFIG)
+
+$(OBJ)/conv_layer.o: $(SRC)/conv_layer.cpp
 	$(CLANG) -c $< -o $@ $(CFLAGS) $(CVCONFIG)
 
 dirs:

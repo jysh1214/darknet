@@ -1,3 +1,4 @@
+#include "../include/size_params.hpp"
 #include "layer.hpp"
 #include "network.hpp"
 #include "parser.hpp"
@@ -95,9 +96,17 @@ void Network::parseNetwork(string cfgfile)
     this->clip = geti(NET_SECTION["clip"], 0);
     #undef NET_SECTION
 
+    sizeParams params;
+    params.h = this->h;
+    params.w = this->w;
+    params.c = this->c;
+    params.inputs = this->inputs;
+    params.batch = this->batch;
+    params.time_steps = this->time_steps;
+
     // 剩下每個 Section 已經讀到所有參數, 現在 assign 到 layer
     for (auto section: sectionList) {
-        section->assignValue();
+        section->assignValue(params);
     }
 }
 
