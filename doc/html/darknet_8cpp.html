@@ -57,20 +57,26 @@ Include dependency graph for darknet.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="darknet_8cpp__incl.png" border="0" usemap="#asrc_2darknet_8cpp" alt=""/></div>
 <map name="asrc_2darknet_8cpp" id="asrc_2darknet_8cpp">
-<area shape="rect" title=" " alt="" coords="172,5,284,32"/>
-<area shape="rect" href="darknet_8hpp.html" title=" " alt="" coords="59,80,149,107"/>
-<area shape="rect" href="detector_8hpp.html" title=" " alt="" coords="224,80,317,107"/>
-<area shape="rect" title=" " alt="" coords="77,304,131,331"/>
-<area shape="rect" title=" " alt="" coords="592,304,664,331"/>
-<area shape="rect" href="parser_8hpp.html" title=" " alt="" coords="284,155,367,181"/>
-<area shape="rect" href="network_8hpp.html" title=" " alt="" coords="5,155,99,181"/>
-<area shape="rect" href="utils_8hpp.html" title=" " alt="" coords="326,229,397,256"/>
-<area shape="rect" title=" " alt="" coords="501,304,568,331"/>
-<area shape="rect" title=" " alt="" coords="155,304,202,331"/>
-<area shape="rect" title=" " alt="" coords="419,304,477,331"/>
-<area shape="rect" title=" " alt="" coords="227,304,301,331"/>
-<area shape="rect" title=" " alt="" coords="325,304,395,331"/>
-<area shape="rect" title=" " alt="" coords="37,229,99,256"/>
+<area shape="rect" title=" " alt="" coords="221,5,333,32"/>
+<area shape="rect" href="darknet_8hpp.html" title=" " alt="" coords="5,80,96,107"/>
+<area shape="rect" href="detector_8hpp.html" title=" " alt="" coords="431,80,524,107"/>
+<area shape="rect" title=" " alt="" coords="106,304,161,331"/>
+<area shape="rect" title=" " alt="" coords="811,304,883,331"/>
+<area shape="rect" href="imgproc_8hpp.html" title=" " alt="" coords="968,155,1061,181"/>
+<area shape="rect" href="parser_8hpp.html" title=" " alt="" coords="492,155,575,181"/>
+<area shape="rect" href="network_8hpp.html" title=" " alt="" coords="375,155,468,181"/>
+<area shape="rect" title=" " alt="" coords="1272,229,1411,256"/>
+<area shape="rect" title=" " alt="" coords="787,229,927,256"/>
+<area shape="rect" title=" " alt="" coords="952,229,1077,256"/>
+<area shape="rect" title=" " alt="" coords="1101,229,1248,256"/>
+<area shape="rect" href="utils_8hpp.html" title=" " alt="" coords="374,229,445,256"/>
+<area shape="rect" title=" " alt="" coords="185,304,252,331"/>
+<area shape="rect" title=" " alt="" coords="551,304,598,331"/>
+<area shape="rect" title=" " alt="" coords="622,304,786,331"/>
+<area shape="rect" title=" " alt="" coords="468,304,527,331"/>
+<area shape="rect" title=" " alt="" coords="276,304,351,331"/>
+<area shape="rect" title=" " alt="" coords="375,304,444,331"/>
+<area shape="rect" href="section_8hpp.html" title=" " alt="" coords="571,229,661,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -111,17 +117,17 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">string</span> cfgfile = <span class="stringliteral">&quot;cfg/yolov3-tiny.cfg&quot;</span>;  </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">string</span> cfgfile = <span class="stringliteral">&quot;cfg/yolov3-tiny.cfg&quot;</span>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">string</span> datafile = <span class="stringliteral">&quot;cfg/coco.data&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> weightsfile = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> weightsfile = <span class="stringliteral">&quot;yolov3.weights&quot;</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (std::string(argv[1]) == <span class="stringliteral">&quot;predict&quot;</span>) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector</a>(cfgfile, datafile, weightsfile, <span class="stringliteral">&quot;fuck&quot;</span>, 0.5);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector</a>(cfgfile, datafile, weightsfile, <span class="stringliteral">&quot;data/dog.jpg&quot;</span>, 0.5);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="ttc" id="adetector_8hpp_html_ad097dcac7a3db8f5531dafcc31ca2cd9"><div class="ttname"><a href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector</a></div><div class="ttdeci">static void detector(string cfgfile, string datacfg, string weightfile, string filename, float thresh)</div><div class="ttdef"><b>Definition:</b> detector.hpp:11</div></div>
+<div class="ttc" id="adetector_8hpp_html_ad097dcac7a3db8f5531dafcc31ca2cd9"><div class="ttname"><a href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector</a></div><div class="ttdeci">static void detector(string cfgfile, string datacfg, string weightfile, string filename, float thresh)</div><div class="ttdef"><b>Definition:</b> detector.hpp:12</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9">detector()</a>.</p>
 <div class="dynheader">
@@ -129,15 +135,20 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="darknet_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#adarknet_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
 <map name="adarknet_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="adarknet_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,56,57"/>
-<area shape="rect" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9" title=" " alt="" coords="104,31,173,57"/>
-<area shape="rect" href="parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7" title=" " alt="" coords="221,5,300,32"/>
-<area shape="rect" href="parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="223,56,298,83"/>
-<area shape="rect" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c" title=" " alt="" coords="351,56,430,83"/>
-<area shape="rect" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="367,5,414,32"/>
-<area shape="rect" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="348,107,433,133"/>
-<area shape="rect" href="utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="481,81,584,108"/>
-<area shape="rect" href="utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="509,132,556,159"/>
+<area shape="rect" title=" " alt="" coords="5,113,56,140"/>
+<area shape="rect" href="detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9" title=" " alt="" coords="104,113,173,140"/>
+<area shape="rect" href="parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c" title=" " alt="" coords="411,12,490,38"/>
+<area shape="rect" href="parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7" title=" " alt="" coords="247,37,326,64"/>
+<area shape="rect" href="struct_network.html#a7d348ce478fa710da0d6ea2e45388ed5" title=" " alt="" coords="227,138,346,165"/>
+<area shape="rect" href="parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="249,88,324,114"/>
+<area shape="rect" href="imgproc_8hpp.html#a3ae6089a8be081adfd58d7c5b6745d4d" title=" " alt="" coords="245,189,328,216"/>
+<area shape="rect" href="struct_network.html#af842e745609468ef16bb0dc57e5650ad" title=" " alt="" coords="221,240,352,266"/>
+<area shape="rect" href="utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="427,62,474,89"/>
+<area shape="rect" href="utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="408,113,493,140"/>
+<area shape="rect" href="utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="549,138,652,165"/>
+<area shape="rect" href="utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="577,88,624,114"/>
+<area shape="rect" href="imgproc_8hpp.html#a4b4e173c3589b551ad938a8a42f158c3" title=" " alt="" coords="400,189,501,216"/>
+<area shape="rect" href="imgproc_8hpp.html#a249c517022a58bf0090c4888f6b4579f" title=" " alt="" coords="568,189,633,216"/>
 </map>
 </div>
 

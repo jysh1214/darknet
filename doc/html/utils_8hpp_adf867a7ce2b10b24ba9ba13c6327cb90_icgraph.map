@@ -1,7 +1,8 @@
 <map id="removeSpace" name="removeSpace">
-<area shape="rect" id="node1" title=" " alt="" coords="477,5,580,32"/>
-<area shape="rect" id="node2" href="$utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="344,5,429,32"/>
-<area shape="rect" id="node3" href="$parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="221,5,296,32"/>
-<area shape="rect" id="node4" href="$detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9" title=" " alt="" coords="104,5,173,32"/>
-<area shape="rect" id="node5" href="$darknet_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="563,31,665,57"/>
+<area shape="rect" id="node2" href="$utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="429,31,515,57"/>
+<area shape="rect" id="node3" href="$struct_network.html#abded646f5e312471bc0e42a9bc6f7fc0" title=" " alt="" coords="221,5,381,32"/>
+<area shape="rect" id="node4" href="$parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="264,56,339,83"/>
+<area shape="rect" id="node5" href="$detector_8hpp.html#ad097dcac7a3db8f5531dafcc31ca2cd9" title=" " alt="" coords="104,56,173,83"/>
+<area shape="rect" id="node6" href="$darknet_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,56,56,83"/>
 </map>

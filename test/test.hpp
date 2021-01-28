@@ -130,4 +130,15 @@ TEST(CheckFileTEST, CheckFile)
     ASSERT_NO_THROW(checkFile(file, filename));
 }
 
+TEST(CheckNetOptionTEST, CheckNet)
+{
+    string cfgfile = "cfg/yolov3-tiny.cfg";
+    string weightfile = "";
+    Network* net = new Network(cfgfile, weightfile);
+    net->setBatch(1);
+
+    ASSERT_NEAR(net->momentum , 0.9, 0.0001);
+    ASSERT_NEAR(net->decay , 0.0005, 0.0001);
+}
+
 #endif

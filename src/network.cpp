@@ -1,3 +1,4 @@
+#include "layer.hpp"
 #include "network.hpp"
 #include "parser.hpp"
 #include <iostream>
@@ -64,15 +65,50 @@ void Network::parseNetwork(string cfgfile)
             case ';':
                 break;
             default:
-                // 永遠選最後一個 node
                 if (!readOption(line, (*(sectionList.end()-1))->params)) {
                     throw string("Could not parse: " + line + "\n");
                 }
                 break;
         }
     }
-
     file.close();
+    // 讀取第一層 network 的參數
+    #define NET_SECTION sectionList[0]->params
+    auto geti = [=](string s, int i) -> int{
+        if (s == "") return i;
+        else return stoi(s);
+    };
+    auto getf = [=](string s, float i) -> float{
+        if (s == "") return i;
+        else return stof(s);
+    };
+
+    this->momentum = getf(NET_SECTION["momentum"], 0.9);
+    this->decay = getf(NET_SECTION["decay"], 0.001);
+    int subdivs = geti(NET_SECTION["subdivisions"], 1);
+    this->time_steps = geti(NET_SECTION["time_steps"], 1);
+    this->notruth = geti(NET_SECTION["notruth"], 0);
+    this->batch /= subdivs;
+    this->batch *= this->time_steps;
+    this->subdivisions = subdivs;
+    this->random = geti(NET_SECTION["random"], 0);
+    this->h = geti(NET_SECTION["height"], 0);
+    this->w = geti(NET_SECTION["width"], 0);
+    this->c = geti(NET_SECTION["channels"], 0);
+    this->inputs = geti(NET_SECTION["inputs"], this->h * this->w * this->c);
+    this->max_crop = geti(NET_SECTION["max_crop"], this->w*2);
+    this->min_crop = geti(NET_SECTION["min_crop"], this->w);
+    this->max_ratio = getf(NET_SECTION["max_ratio"], (float) this->max_crop / this->w);
+    this->min_ratio = getf(NET_SECTION["min_ratio"], (float) this->min_crop / this->w);
+    // net->center = option_find_int_quiet(options, "center",0);
+    // net->clip = option_find_float_quiet(options, "clip", 0);
+
+    #undef NET_SECTION
+
+    // 剩下每個 Section 已經讀到所有參數, 現在 assign 到 layer
+    // for (auto section: sectionList) {
+    //     section->assignValue();
+    // }
 }
 
 void Network::loadWeights(string weightfile)

@@ -1,5 +1,9 @@
 <map id="src/network.hpp" name="src/network.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="20,5,135,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,67,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,80,146,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="255,5,370,32"/>
+<area shape="rect" id="node2" href="$section_8hpp.html" title=" " alt="" coords="172,80,261,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="285,80,340,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="365,80,423,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,169,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="193,155,240,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="265,155,337,181"/>
 </map>

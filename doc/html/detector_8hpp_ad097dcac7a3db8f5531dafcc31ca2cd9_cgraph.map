@@ -1,10 +1,15 @@
 <map id="detector" name="detector">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,75,57"/>
-<area shape="rect" id="node2" href="$parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7" title=" " alt="" coords="123,5,201,32"/>
-<area shape="rect" id="node5" href="$parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="125,56,199,83"/>
-<area shape="rect" id="node3" href="$parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c" title=" " alt="" coords="253,56,331,83"/>
-<area shape="rect" id="node4" href="$utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="269,5,315,32"/>
-<area shape="rect" id="node6" href="$utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="249,107,335,133"/>
-<area shape="rect" id="node7" href="$utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="383,81,485,108"/>
-<area shape="rect" id="node8" href="$utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="411,132,457,159"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,113,75,140"/>
+<area shape="rect" id="node2" href="$parser_8hpp.html#a4e9e09ed05e1acf1b1e16169ed58b14c" title=" " alt="" coords="313,12,391,38"/>
+<area shape="rect" id="node3" href="$parser_8hpp.html#a1a80b00e57f1f60c0b99879d51d8edd7" title=" " alt="" coords="149,37,227,64"/>
+<area shape="rect" id="node5" href="$struct_network.html#a7d348ce478fa710da0d6ea2e45388ed5" title=" " alt="" coords="129,138,247,165"/>
+<area shape="rect" id="node6" href="$parser_8hpp.html#a5708bbeb8396d62f4401693005a96d12" title=" " alt="" coords="151,88,225,114"/>
+<area shape="rect" id="node10" href="$imgproc_8hpp.html#a3ae6089a8be081adfd58d7c5b6745d4d" title=" " alt="" coords="147,189,229,216"/>
+<area shape="rect" id="node13" href="$struct_network.html#af842e745609468ef16bb0dc57e5650ad" title=" " alt="" coords="123,240,253,266"/>
+<area shape="rect" id="node4" href="$utils_8hpp.html#adecaa036f10a8452bfae2a0dcd65b05f" title=" " alt="" coords="329,62,375,89"/>
+<area shape="rect" id="node7" href="$utils_8hpp.html#a68fc45bd8483286e0266f0b55bb754fc" title=" " alt="" coords="309,113,395,140"/>
+<area shape="rect" id="node8" href="$utils_8hpp.html#adf867a7ce2b10b24ba9ba13c6327cb90" title=" " alt="" coords="451,138,553,165"/>
+<area shape="rect" id="node9" href="$utils_8hpp.html#a788d09d759fa3c49fc41d8543a44d75a" title=" " alt="" coords="479,88,525,114"/>
+<area shape="rect" id="node11" href="$imgproc_8hpp.html#a4b4e173c3589b551ad938a8a42f158c3" title=" " alt="" coords="301,189,403,216"/>
+<area shape="rect" id="node12" href="$imgproc_8hpp.html#a249c517022a58bf0090c4888f6b4579f" title=" " alt="" coords="469,189,535,216"/>
 </map>
