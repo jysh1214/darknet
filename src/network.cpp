@@ -72,17 +72,8 @@ void Network::parseNetwork(string cfgfile)
         }
     }
     file.close();
-    // 讀取第一層 network 的參數
+    // assign 第一層 network 的參數
     #define NET_SECTION sectionList[0]->params
-    auto geti = [=](string s, int i) -> int{
-        if (s == "") return i;
-        else return stoi(s);
-    };
-    auto getf = [=](string s, float i) -> float{
-        if (s == "") return i;
-        else return stof(s);
-    };
-
     this->momentum = getf(NET_SECTION["momentum"], 0.9);
     this->decay = getf(NET_SECTION["decay"], 0.001);
     int subdivs = geti(NET_SECTION["subdivisions"], 1);
@@ -100,15 +91,14 @@ void Network::parseNetwork(string cfgfile)
     this->min_crop = geti(NET_SECTION["min_crop"], this->w);
     this->max_ratio = getf(NET_SECTION["max_ratio"], (float) this->max_crop / this->w);
     this->min_ratio = getf(NET_SECTION["min_ratio"], (float) this->min_crop / this->w);
-    // net->center = option_find_int_quiet(options, "center",0);
-    // net->clip = option_find_float_quiet(options, "clip", 0);
-
+    this->center = geti(NET_SECTION["center"], 0);
+    this->clip = geti(NET_SECTION["clip"], 0);
     #undef NET_SECTION
 
     // 剩下每個 Section 已經讀到所有參數, 現在 assign 到 layer
-    // for (auto section: sectionList) {
-    //     section->assignValue();
-    // }
+    for (auto section: sectionList) {
+        section->assignValue();
+    }
 }
 
 void Network::loadWeights(string weightfile)

@@ -11,6 +11,23 @@
 
 using namespace std;
 
+static int geti(string s, int i)
+{
+    if (s == "") return i;
+    else return stoi(s);
+}
+
+static float getf(string s, float f)
+{
+    if (s == "") return f;
+    else return stof(s);
+}
+
+Layer parseConvolutional(map<string, string>& params)
+{
+
+}
+
 static LAYER_TYPE str2LayerType(string type)
 {
     if (type == "shortcut") return SHORTCUT;

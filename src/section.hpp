@@ -2,6 +2,7 @@
 #define SECTION_H
 
 #include "../include/layer_type.hpp"
+#include "parser.hpp"
 #include "layer.hpp"
 #include <map>
 #include <iostream>
@@ -21,18 +22,21 @@ struct Section
 
     void assignValue()
     {
-        // switch (type) {
-        //     case NETWORK:
-        //         break;
-        //     case CONVOLUTIONAL:
-        //         layer = parseConvolutional(params);
-        //         break;
-        //     case YOLO:
-        //         layer = parseYOLO(params);
-        //         break;
-        //     default:
-        //         break;
-        // }
+        switch (type) {
+            case NETWORK:
+                break;
+            case CONVOLUTIONAL:
+                layer = parseConvolutional(params);
+                break;
+            case YOLO:
+                // layer = parseYOLO(params);
+                break;
+            case SHORTCUT:
+                // layer = parseShortcut(params);
+                break;
+            default:
+                break;
+        }
     }
 };
 
