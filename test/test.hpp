@@ -90,4 +90,23 @@ TEST(PaerserNetworkTEST, GetLayerType)
     delete net;
 }
 
+TEST(PaerserNetworkTEST, GetLayerParams)
+{
+    string cfgfile = "cfg/yolov3-tiny.cfg";
+    string weightfile = "";
+    Network* net = new Network(cfgfile, weightfile);
+
+    Node* net_section = net->nodeList[0];
+    ASSERT_EQ(net_section->type, NETWORK);
+    ASSERT_EQ(net_section->params["batch"], "1");
+    ASSERT_EQ(net_section->params["decay"], "0.0005");
+
+    Node* conv_section = net->nodeList[1];
+    ASSERT_EQ(conv_section->type, CONVOLUTIONAL);
+    ASSERT_EQ(conv_section->params["filters"], "16");
+    ASSERT_EQ(conv_section->params["activation"], "leaky");
+
+    delete net;
+}
+
 #endif

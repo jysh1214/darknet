@@ -15,6 +15,8 @@ struct Network
     // Node 包含 layer type 和其參數
     vector<Node*> nodeList;
 
+    
+
 private:
     void parseNetwork(string cfgfile);
 };

@@ -39,11 +39,13 @@ void Network::parseNetwork(string cfgfile)
                 Node* node = new Node(type);
                 nodeList.push_back(node);
             }
+            case '\0':
             case '#':
             case ';':
                 break;
             default:
-                if (!readOption(line, (*nodeList.end())->params)) {
+                // 選永遠最後一個 node
+                if (!readOption(line, (*(nodeList.end()-1))->params)) {
                     throw string("Could not parse: " + line + "\n");
                 }
                 break;
