@@ -7,7 +7,9 @@
 
 using namespace std;
 
-// OpenCV 已經有 Node, 所以用 Section 命名
+/**
+ * 包含 Layer 和其參數
+ */
 struct Section
 {
     Section(const LAYER_TYPE _type): type(_type){}

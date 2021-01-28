@@ -18,10 +18,12 @@ struct Network
     // Node 包含 layer type 和其參數
     vector<Section*> sectionList;
 
-
+    // 看到的圖片數量
+    size_t* seen;
 
 private:
     void parseNetwork(string cfgfile);
+    void loadWeights(string weightfile);
 };
 
 #endif

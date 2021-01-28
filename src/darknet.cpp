@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
     string cfgfile = "cfg/yolov3-tiny.cfg";
     string datafile = "cfg/coco.data";
-    string weightsfile = "";
+    string weightsfile = "yolov3.weights";
 
     if (std::string(argv[1]) == "predict") {
         detector(cfgfile, datafile, weightsfile, "data/dog.jpg", 0.5);

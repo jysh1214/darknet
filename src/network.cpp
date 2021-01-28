@@ -4,12 +4,17 @@
 #include <fstream>
 #include <sstream>
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
 using namespace std;
 
 Network::Network(string cfgfile, string weightfile)
 {
     try {
         parseNetwork(cfgfile);
+        loadWeights(weightfile);
     }
     catch (const string error) {
         cout << error;
@@ -68,4 +73,30 @@ void Network::parseNetwork(string cfgfile)
     }
 
     file.close();
+}
+
+void Network::loadWeights(string weightfile)
+{
+    FILE *fp = fopen("yolov3.weights", "wb");
+    int major = 0;
+    int minor = 2;
+    int revision = 0;
+    fwrite(&major, sizeof(int), 1, fp);
+    fwrite(&minor, sizeof(int), 1, fp);
+    fwrite(&revision, sizeof(int), 1, fp);
+
+    if ((major*10 + minor) >= 2 && major < 1000 && minor < 1000) {
+        fread(this->seen, sizeof(size_t), 1, fp);
+    } else {
+        int iseen = 0;
+        fread(&iseen, sizeof(int), 1, fp);
+        *(this->seen) = iseen;
+    }
+    int transpose = (major > 1000) || (minor > 1000);
+
+    for (auto section: sectionList){
+
+    }
+
+    fclose(fp);
 }
